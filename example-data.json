@@ -1,0 +1,96 @@
+{
+  "notice": "All values are illustrative, not reported results.",
+  "bars": [
+    {
+      "category": "A",
+      "value": 40
+    },
+    {
+      "category": "B",
+      "value": 65
+    },
+    {
+      "category": "C",
+      "value": 80
+    }
+  ],
+  "trend": [
+    {
+      "period": "Q1",
+      "actual": 28,
+      "target": 40
+    },
+    {
+      "period": "Q2",
+      "actual": 42,
+      "target": 40
+    },
+    {
+      "period": "Q3",
+      "actual": null,
+      "target": 40
+    },
+    {
+      "period": "Q4",
+      "actual": 60,
+      "target": 40
+    }
+  ],
+  "shares": [
+    {
+      "category": "A",
+      "value": 45
+    },
+    {
+      "category": "B",
+      "value": 30
+    },
+    {
+      "category": "C",
+      "value": 25
+    }
+  ],
+  "waterfall": {
+    "opening": 100,
+    "changes": [
+      25,
+      -15,
+      10
+    ],
+    "closing": 120
+  },
+  "scatter": [
+    {
+      "x": 2,
+      "y": 3
+    },
+    {
+      "x": 4,
+      "y": 4
+    },
+    {
+      "x": 5,
+      "y": 2
+    },
+    {
+      "x": 7,
+      "y": 6
+    },
+    {
+      "x": 8,
+      "y": 5
+    }
+  ],
+  "heatmap": [
+    [
+      20,
+      40,
+      null
+    ],
+    [
+      60,
+      80,
+      100
+    ]
+  ]
+}

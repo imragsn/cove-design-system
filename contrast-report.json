@@ -1,0 +1,128 @@
+{
+  "method": "WCAG relative luminance/sRGB",
+  "textPairs": [
+    {
+      "fg": "ink",
+      "bg": "ivory",
+      "ratio": 11.581,
+      "textAA": true
+    },
+    {
+      "fg": "ink",
+      "bg": "mist",
+      "ratio": 10.692,
+      "textAA": true
+    },
+    {
+      "fg": "teal",
+      "bg": "apricot",
+      "ratio": 6.638,
+      "textAA": true
+    },
+    {
+      "fg": "teal",
+      "bg": "butter",
+      "ratio": 9.238,
+      "textAA": true
+    },
+    {
+      "fg": "ivory",
+      "bg": "teal",
+      "ratio": 10.597,
+      "textAA": true
+    },
+    {
+      "fg": "muted",
+      "bg": "ivory",
+      "ratio": 5.969,
+      "textAA": true
+    },
+    {
+      "fg": "muted",
+      "bg": "mist",
+      "ratio": 5.511,
+      "textAA": true
+    },
+    {
+      "fg": "positive",
+      "bg": "ivory",
+      "ratio": 7.142,
+      "textAA": true
+    },
+    {
+      "fg": "warning",
+      "bg": "ivory",
+      "ratio": 6.633,
+      "textAA": true
+    },
+    {
+      "fg": "negative",
+      "bg": "ivory",
+      "ratio": 5.756,
+      "textAA": true
+    },
+    {
+      "fg": "info",
+      "bg": "ivory",
+      "ratio": 6.19,
+      "textAA": true
+    },
+    {
+      "fg": "ivory",
+      "bg": "positive",
+      "ratio": 7.142,
+      "textAA": true
+    },
+    {
+      "fg": "ivory",
+      "bg": "warning",
+      "ratio": 6.633,
+      "textAA": true
+    },
+    {
+      "fg": "ivory",
+      "bg": "negative",
+      "ratio": 5.756,
+      "textAA": true
+    },
+    {
+      "fg": "ivory",
+      "bg": "info",
+      "ratio": 6.19,
+      "textAA": true
+    }
+  ],
+  "seriesMarks": [
+    {
+      "series": "#123F43",
+      "background": "ivory",
+      "ratio": 10.597,
+      "graphicsPass": true
+    },
+    {
+      "series": "#315F86",
+      "background": "ivory",
+      "ratio": 6.19,
+      "graphicsPass": true
+    },
+    {
+      "series": "#A65332",
+      "background": "ivory",
+      "ratio": 4.933,
+      "graphicsPass": true
+    },
+    {
+      "series": "#6F527C",
+      "background": "ivory",
+      "ratio": 6.069,
+      "graphicsPass": true
+    },
+    {
+      "series": "#526A38",
+      "background": "ivory",
+      "ratio": 5.539,
+      "graphicsPass": true
+    }
+  ],
+  "paleFocus": "Apricot requires teal outline on ivory; line token decorative only."
+}
