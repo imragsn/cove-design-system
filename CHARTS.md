@@ -1,3 +1,32 @@
+# COVE — Chart guide 1.1.0
+
+| ID | Rule |
+| --- | --- |
+| CH01 / Question | Comparison→bars/dots; trend→line; part-to-whole→100%stackedbar; distribution→histogram/dots; relationship→scatter; uncertainty→intervals; exact lookup→table. |
+| CH02 / Bar | Horizontal preferred for long labels;<=8 categories on main slide.Sort by value unless ordinal/time order.Zero baseline required.Negative values around visiblezero.Square bar ends, even in rounded cards. |
+| CH03 / Grouped comparison | 2-3 series per category,<=6categories; equal scales and consistent order.Use dotplot when groups become crowded.No dualaxes by default. |
+| CH04 / Time series | Up to4series; true time spacing.Label nonzero domain if justified; missing actual points break line.Actual solid, target dashed, forecast dashed+boundary+label. |
+| CH05 / Whole | Exclusive exhaustive categories, denominator explicit;<=5segments.Fixed order, totals reconcile; use a table if parts do not form a whole.Donut optional only2-5positive parts; bars preferred for precision. |
+| CH06 / Distribution | Raw observations or documented bins.Label boundaries, count/sample size; include zero bins; compare with identical bins.No arbitrary smoothing/outlier deletion. |
+| CH07 / Scatter | Paired observations with units, scope and n.Correlation is not cause.Fit only if justified with stated method; never fabricate a regression. |
+| CH08 / Actual-target | Actual, target, period and benchmark definition.Bullet chart/dots preferred.Written threshold required for qualitative bands.Unknown status=Not assessed. |
+| CH09 / Waterfall | Opening+signed additive changes=closing.Totals startzero; changes float from cumulative balance.Show connectors and signed labels; separate total/delta encoding. |
+| CH10 / Heatmap | Sequential scale for magnitude; diverging only with meaningful midpoint.Values/legend required.Missing uses hatch+N/A, neverzero.Contrast label against each cell fill. |
+| CH11 / Interval | Show supplied lower/upper/central value and range/confidence definition.No invented intervals; prediction and confidence intervals are different. |
+| CH12 / Map | Only if geography matters.Rates for choropleth; rawcounts may need proportional symbols.Source coordinates/basemap licence, class bins, denominator, cutoff.Informational network differs from decoration. |
+| CH13 / Canvas | Units at1920x1080.Read chart labels>=26px; Present >=30px.Legend/directlabels same minimum.Full plot should occupy>=55%of content width; split instead of shrink. |
+| CH14 / Marks | Use5px line and14px marker atnative canvas;2px zeroaxis/outline,1px decorativegrid.4-6major ticks using1/2/2.5/5x10^n.Never use rounded bars,3D, area/volume pictograms or shadow as quantitative encoding. |
+| CH15 / Color | Fixed series mapping:#123F43, #315F86, #A65332, #6F527C.Primaryfocus#FFB38Aon#F7F5EFrequires2px#123F43outline.No pale accent alone for meaningful marks.Status colors require state and threshold; do not assign palette decoration a status meaning. |
+| CH16 / Typography | Direct labels preferred; avoid overlapping endpoints, slanted ticks and detached units.Resolve collision by widening, shortening truthful labels, or splitting.Critical caveats use body size, not footer. |
+| CH17 / Numbers | Source, period, scope, units, denominator andcutoff explicit.40%→50%=+10percentage points or+25%relative; specifywhich.Compute raw, round display only. |
+| CH18 / Missing | 0, null, N/A andNotassessed differ.No null-to-zero conversion; no silent interpolation.Show gaps, excluded sample and noncomparable periods. |
+| CH19 / Semantics | Colors/labels consistent across deck.Pale focus outlined; series distinguished by marker/dash/directlabel, not hue alone.No default causal headline from association. |
+| CH20 / Access and export | Provide concise accessible summary and underlying data table; SVGtitle/desc; editable native chart+source data if supported.SVGspecimen is not native chart master.Check actual render, textselection and readingorder where supported. |
+| CH21 / Integrity gate | Recompute totals, deltas, percentages, denominators, rounding and intervals.Check domain/baseline, signs, nulls, seriesmapping, labelcollisions, source and final export. |
+| CH22 / Trace record | chartID, question, type, datasetID, source locator, period/cutoff, units, denominator, fieldtypes, transformation, domain, ticks, mapping, focusreason, caveat, summary, QAresult. |
+
+## Original detailed contracts
+
 # COVE — Chart execution contracts
 
 10 / COVE SYSTEM
@@ -86,15 +115,15 @@ Bar lengths encode value; C is the focal category.Horizontal barsA40, B65, C80 e
 
 A gap is not zero.
 
-Q3 has no actual value; the actual line stays broken.Trend with missing periodQ1 actual28,Q2 42,Q3 missing,Q4 60. Target40. Domain0 to80. No interpolation.020406080Q1Q2Q3Q4Target402842Not available60Actual solid / target dashed / gap retainedD03 / D22 / No inferred trend across missing observations.ILLUSTRATIVE DATA
+Q3 has no actual value; the actual line stays broken.Trend with missing periodQ1 actual28, Q2 42, Q3 missing, Q4 60. Target40. Domain0 to80. No interpolation.020406080Q1Q2Q3Q4Target402842Not available60Actual solid / target dashed / gap retainedD03 / D22 / No inferred trend across missing observations.ILLUSTRATIVE DATA
 
 A defined whole.
 
-A donut is optional; use bars when precision matters.Share of illustrative wholeA45%,B30%,C25%. Positive, exhaustive parts totaling100%.A / 45%B / 30%C / 25%100%Example wholeParts45 +30 +25 =100 / no source datasetD05 / Actual data sums to100%; exact values remain visible.ILLUSTRATIVE DATA
+A donut is optional; use bars when precision matters.Share of illustrative wholeA45%, B30%, C25%. Positive, exhaustive parts totaling100%.A / 45%B / 30%C / 25%100%Example wholeParts45 +30 +25 =100 / no source datasetD05 / Actual data sums to100%; exact values remain visible.ILLUSTRATIVE DATA
 
 Contributions reconcile.
 
-Opening and closing totals differ from signed changes.Illustrative waterfallOpening100,changes+25,-15,+10,closing120. Domain0 to160.04080120160100Open+25Add-15Loss+10Add120Close100 +25 −15 +10 =120 example unitsD09 / Signed changes, total bars and connectors; additive reconciliation checked.ILLUSTRATIVE DATA
+Opening and closing totals differ from signed changes.Illustrative waterfallOpening100, changes+25,-15,+10, closing120. Domain0 to160.04080120160100Open+25Add-15Loss+10Add120Close100 +25 −15 +10 =120 example unitsD09 / Signed changes, total bars and connectors; additive reconciliation checked.ILLUSTRATIVE DATA
 
 Relationship, not causation.
 
@@ -102,20 +131,20 @@ Paired observations; no invented fit or causal claim.Scatter of five illustrativ
 
 Magnitude and missingness.
 
-Sequential bins; absent value has a distinct hatch.Illustrative heatmapR1 values20,40,missing.R2 60,80,100. Sequential score scale0 to100.2040N/A6080100ABCR1R20–20>20–40>40–60>60–80>80–100Example score / fixed0–100 / N/A is missingD10 / Values remain explicit. Hatch is reserved for missing data.
+Sequential bins; absent value has a distinct hatch.Illustrative heatmapR1 values20,40, missing.R2 60,80,100. Sequential score scale0 to100.2040N/A6080100ABCR1R20–20>20–40>40–60>60–80>80–100Example score / fixed0–100 / N/A is missingD10 / Values remain explicit. Hatch is reserved for missing data.
 
  | Underlying sample | Values
 
- | Bars / points | A40,B65,C80; scale0–100
+ | Bars / points | A40, B65, C80; scale0–100
 
- | Trend / points | Q1 28,Q2 42,Q3 null,Q4 60; target40; scale0–80
+ | Trend / points | Q1 28, Q2 42, Q3 null, Q4 60; target40; scale0–80
 
- | Shares / percent | A45,B30,C25; total100%
+ | Shares / percent | A45, B30, C25; total100%
 
  | Waterfall / units | 100+25−15+10=120
 
- | Scatter / x,y | (2,3),(4,4),(5,2),(7,6),(8,5)
+ | Scatter / x, y | (2,3),(4,4),(5,2),(7,6),(8,5)
 
- | Heatmap / scores | R1[20,40,null];R2[60,80,100]; scale0–100
+ | Heatmap / scores | R1[20,40, null]; R2[60,80,100]; scale0–100
 
 The examples are SVG and their data are in example-data.json. They demonstrate appearance and encoding, not an interactive charting library. Apply slide token typography at production size.

@@ -44,15 +44,15 @@ Crop the image. Preserve the source.
 
  | M03 / Mask choice | S02 for hero/large photo; S01 for secondary; S05 only avatar/object with sufficient clearance. Max two nonrectangular photo masks per slide.
 
- | M04 / Focal point | Normalized source coordinates fx,fy in [0,1]. Inspect the subject, then set point; .5,.5 is fallback, not a claim of correct composition. Keep relevant faces/hands outside curved corners.
+ | M04 / Focal point | Normalized source coordinates fx, fy in [0,1]. Inspect the subject, then set point; .5,.5 is fallback, not a claim of correct composition. Keep relevant faces/hands outside curved corners.
 
- | M05 / Exact cover math | For source W,H and frame w,h: scale s=max(w/W,h/H); rendered rw=sW,rh=sH. Offset x=clamp(w/2-fx*rw,w-rw,0), y=clamp(h/2-fy*rh,h-rh,0). Clip after positioning; record offsets.
+ | M05 / Exact cover math | For source W, H and frame w, h: scale s=max(w/W, h/H); rendered rw=sW, rh=sH. Offset x=clamp(w/2-fx*rw, w-rw,0), y=clamp(h/2-fy*rh, h-rh,0). Clip after positioning; record offsets.
 
  | M06 / Example crop | 2400 x 1600 source into 720 x 900 frame, focal (.60,.45): s=.5625, rendered 1350 x 900, offset (-450,0). Visible source area 1280 x 1600; 46.67% of original width removed.
 
  | M07 / Resolution | For 13.333 x 7.5 inch master, a 720 x 900 frame occupies 5 x 6.25 in. The example delivers 256 effective PPI. Prefer >=150; minimum100 for photos. Evidence screenshots must also remain legible at final size.
 
- | M08 / Geometry | Cap large radius at min(72,shortSide/4), small at min(16,shortSide/8) for custom-sized diagonal masks. For standard >=320 frames use specified72/16. Apply uniform scaling, not arbitrary CSS percentage radius.
+ | M08 / Geometry | Cap large radius at min(72, shortSide/4), small at min(16, shortSide/8) for custom-sized diagonal masks. For standard >=320 frames use specified72/16. Apply uniform scaling, not arbitrary CSS percentage radius.
 
  | M09 / Text zones | Default separate solid text. For any intentional overlay, reserve 48 px inset and 96 px corner exclusions; verify contrast over full text region. Caption below image, gap16-24.
 
@@ -64,8 +64,8 @@ Crop the image. Preserve the source.
 
 Image placement record:
 assetId · sourceFile · sourceWidth/Height · rights · role
-shapeId · frame[x,y,w,h] · radii[TL,TR,BR,BL]
-fit · focal[fx,fy] · scale · offset[x,y] · effectivePPI
+shapeId · frame[x, y, w, h] · radii[TL, TR, BR, BL]
+fit · focal[fx, fy] · scale · offset[x, y] · effectivePPI
 caption · alt · cropLimitations · exportFallback
 
 For a CSS background image, object-position percentages do not directly equal the source focal coordinates above. Use calculated pixel offsets or an SVG image transform for exact placement.13 / COVE SYSTEM
